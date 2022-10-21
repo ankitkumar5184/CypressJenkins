@@ -18,5 +18,6 @@ import './commands'
 import '@shelex/cypress-allure-plugin';
 require("cypress-xpath");
 require('@shelex/cypress-allure-plugin');
+import 'cypress-mochawesome-reporter/register';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

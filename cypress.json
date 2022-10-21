@@ -1,4 +1,11 @@
 {
     "video": false,
-    "screenshot":true
+    "screenshot":true,
+    "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+    "reporterOptions": {
+        "overwrite": true,
+        "html": true,
+        "json": false
+    }
+    
 }
