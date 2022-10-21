@@ -36,9 +36,4 @@ pipeline {
                 echo "Deploying"
             }
         }
-        stage('Reports'){
-            steps {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Cypress_Automation/mochawesome-report', reportFiles: 'mochawesome.html', reportName: 'HTML Report'])
-        }
-    }
 }
