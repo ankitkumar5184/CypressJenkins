@@ -36,11 +36,8 @@ pipeline {
                 echo "Deploying"
             }
         }
-        post {
-        always {
-           success {  
-             echo 'Build successfully executed'
-         }  
+        stage('Reports'){
+            steps {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Cypress_Automation/mochawesome-report', reportFiles: 'mochawesome.html', reportName: 'HTML Report'])
         }
     }
