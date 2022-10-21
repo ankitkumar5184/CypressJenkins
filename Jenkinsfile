@@ -36,3 +36,4 @@ pipeline {
                 echo "Deploying"
             }
         }
+    }
