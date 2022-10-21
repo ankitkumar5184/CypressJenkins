@@ -36,5 +36,13 @@ pipeline {
                 echo "Deploying"
             }
         }
+        post {
+        always {
+            script {
+                BUILD_USER = getBuildUser()
+            }
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Cypress_Automation/mochawesome-report', reportFiles: 'mochawesome.html', reportName: 'HTML Report', reportTitles: ''])
+            deleteDir()
+        }
     }
 }
