@@ -38,9 +38,10 @@ pipeline {
         }
         post {
         always {
-            script {
-                echo "build executed"
-            }
+           success {  
+             echo 'Build successfully executed'
+         }  
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Cypress_Automation/mochawesome-report', reportFiles: 'mochawesome.html', reportName: 'HTML Report'])
         }
     }
+}
